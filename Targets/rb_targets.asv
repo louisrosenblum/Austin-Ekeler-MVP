@@ -107,19 +107,37 @@ zeke_r = get_r(zeke)
 
 %% Plot largest target increases
 
-mcaf
-cohen
-cook
-devonta
-ekeler
-four
-gordon
-jones
-sanders
-singletary
-zeke
+mcaf_r
+cohen_r
+cook_r
+devonta_r
+ekeler_r
+four_r
+gordon_r
+jones_r
+sanders_r
+singletary_r
+zeke_r
 
-x = ["Christian McCaffery" "Tari
+
+x = categorical(["Miles Sanders" "Christian McCaffery" "Melvin Gordon" "Aaron Jones" "Ezekiel Elliot" "Leonard Fournette" "Devonta Freeman" "Tarik Cohen" "Devin Singletary" "Dalvin Cook" "Austin Ekeler"]);
+x = reordercats(x,{'Miles Sanders' 'Christian McCaffery' 'Melvin Gordon' 'Aaron Jones' 'Ezekiel Elliot' 'Leonard Fournette' 'Devonta Freeman' 'Tarik Cohen' 'Devin Singletary' 'Dalvin Cook' 'Austin Ekeler'});
+y = [sanders_r mcaf_r gordon_r jones_r zeke_r four_r devonta_r cohen_r singletary_r cook_r ekeler_r];
+
+bar(x,y,'green')
+title("RB target increases over 2019 NFL season");
+xlabel("Player");
+ylabel("Correlation coefficient");
+
+%% Plot largest target decreases
+
+x = categorical (["Latavius Murray" "Damien Williams" "Todd Gurley" "Alvin Kamara" "Joe Mixon" "James Conner" "Chris Carson" "Saquon Barkley" "LeVeon Bell" "Nick Chubb" "Phillip Lindsay" "David Johnson"]);
+x = 
+y = [murray_r williams_r gurley_r kamara_r mixon_r conner_r carson_r bark_r bell_r chubb_r lindsay_r johnson_r];
+
+%% Plot player
+
+target_plot(ekeler,"Austin Ekeler")
 
 %% Function definitions
 

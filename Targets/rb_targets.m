@@ -124,16 +124,23 @@ x = categorical(["Miles Sanders" "Christian McCaffery" "Melvin Gordon" "Aaron Jo
 x = reordercats(x,{'Miles Sanders' 'Christian McCaffery' 'Melvin Gordon' 'Aaron Jones' 'Ezekiel Elliot' 'Leonard Fournette' 'Devonta Freeman' 'Tarik Cohen' 'Devin Singletary' 'Dalvin Cook' 'Austin Ekeler'});
 y = [sanders_r mcaf_r gordon_r jones_r zeke_r four_r devonta_r cohen_r singletary_r cook_r ekeler_r];
 
-bar(x,y,'green')
-title("RB target increases over 2019 NFL season");
+bar(x,y,'green'),hold on;
+title("RB target change over 2019 NFL season");
 xlabel("Player");
 ylabel("Correlation coefficient");
 
 %% Plot largest target decreases
 
-%% Plot player
+x = categorical(["Latavius Murray" "Damien Williams" "Todd Gurley" "Alvin Kamara" "Joe Mixon" "James Conner" "Chris Carson" "Saquon Barkley" "LeVeon Bell" "Nick Chubb" "Phillip Lindsay" "David Johnson"]);
+x = reordercats(x,{'Latavius Murray' 'Damien Williams' 'Todd Gurley' 'Alvin Kamara' 'Joe Mixon' 'James Conner' 'Chris Carson' 'Saquon Barkley' 'LeVeon Bell' 'Nick Chubb' 'Phillip Lindsay' 'David Johnson'});
+y = [murray_r williams_r gurley_r kamara_r mixon_r conner_r carson_r bark_r bell_r chubb_r lindsay_r johnson_r];
 
-target_plot(mcaf,"Christian McCaffery")
+bar(x,y,'red')
+title("RB target decreases over 2019 NFL season");
+xlabel("Player");
+ylabel("Correlation coefficient");
+
+%% Plot player
 
 %% Function definitions
 
